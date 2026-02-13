@@ -6,7 +6,7 @@ import db from '../../../db.json';
 @PreparePage({
     template: require('./first.page.html'),
     style: require('./first.page.scss'),
-    title: 'Presenteie Jéssica & Alex'
+    title: 'Presenteie Raquel & Fábio'
 })
 export class FirstPage extends Page {
 	public showValue: boolean = false;

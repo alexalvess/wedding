@@ -3,4 +3,14 @@
 
 @import 'scss/reset';
 @import 'scss/animations.scss';
-// @import 'https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css'
+
+@font-face {
+  font-family: 'Hello Paris';
+  src: url('./assets/fonts/hello-paris/Hello-Paris-Sans-Regular.ttf') format('truetype'),
+       url('./assets/fonts/hello-paris/Hello-Paris-Sans-Bold.ttf') format('truetype'),
+       url('./assets/fonts/hello-paris/Hello-Paris-Sans-ExtraLight.ttf') format('truetype'),
+       url('./assets/fonts/hello-paris/Hello-Paris-Sans-Light.ttf') format('truetype'),
+       url('./assets/fonts/hello-paris/Hello-Paris-Sans-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
