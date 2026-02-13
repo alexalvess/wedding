@@ -212,6 +212,36 @@
     }
 }
 
+@media (max-width: 768px) {
+    .first-page {
+        .container {
+            max-width: 90%;
+            padding: 15px;
+            top: 45%;
+        }
+
+        .up-title {
+            font-size: 40px;
+
+            img {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+
+        .up-note {
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        .drop-down {
+            > div {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
 .images-background {
     position: fixed;
     top: 0;
