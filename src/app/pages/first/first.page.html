@@ -5,7 +5,7 @@
 	<div class="page-content">
 		<div class="container">
 			<div class="up-title">
-                <img src="assets/logo.png" alt="" style="background-color: aquamarine;"/>
+                <img src="assets/logo.png" alt=""/>
 				Raquel & Fábio
 			</div>
 
@@ -16,7 +16,7 @@
 			<div class="drop-down">
 				<div (click)="toggleCategoryShow()">
 					<span [class]="{ 'selected': dropDownCategory.selected }">
-						{{dropDownCategory.selected ? dropDownCategory.selected.title : '🙂 Escolha uma Categoria'}}
+						{{dropDownCategory.selected ? dropDownCategory.selected.title : '🎁 Como deseja nos Presentear?'}}
 					</span>
 				</div>
 				<ul @if="dropDownCategory.show">
