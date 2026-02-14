@@ -8,9 +8,9 @@ export class PixService {
 
         const qrCodePix = QrCodePix({
             version: '01',
-            key: '01262129613',
-            name: 'Alex Alves Silva',
-            city: 'Belo Horizonte',
+            key: '+5531992885031',
+            name: 'Raquel Cristina Ferreira da Silva',
+            city: 'BELO HORIZONTE',
             message: `Envio de presente de casamento: ${product}`,
             value: price
         });
