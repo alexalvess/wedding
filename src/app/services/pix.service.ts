@@ -11,7 +11,7 @@ export class PixService {
             key: '+5531992885031',
             name: 'Raquel Cristina Ferreira da Silva',
             city: 'BELO HORIZONTE',
-            message: `Envio de presente de casamento: ${product}`,
+            message: `Presente de casamento: ${product}`,
             value: price
         });
 

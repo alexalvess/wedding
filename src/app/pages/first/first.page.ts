@@ -19,12 +19,12 @@ export class FirstPage extends Page {
 		items: []
 	}
 
-	
-
 	public Currency = new Intl.NumberFormat('pt-BR', {
 		style: 'currency',
 		currency: 'BRL',
 	});
+
+    public message?: string;
 
 	public photos = [1,2,3,4,5,6,7,8,9,10,11,12,13];
 	public album: { number: number }[];
@@ -74,11 +74,13 @@ export class FirstPage extends Page {
 	}
 
 	public openQrCode() {
-		const category = this.dropDownCategory.selected['title'];
-		const value = this.rangeValue.currentValue;
+        console.log(this.message)
 
-		this.dialog.open(QrCodeDialog, {
-			data: { category, value }
-		});
+		// const category = this.dropDownCategory.selected['title'];
+		// const value = this.rangeValue.currentValue;
+
+		// this.dialog.open(QrCodeDialog, {
+		// 	data: { category, value }
+		// });
 	}
 }

@@ -42,6 +42,10 @@
 					<button (click)="increase()">+</button>
 				</div>
 
+				<div class="message-input">
+					<input type="text" maxlength="118" placeholder="Deixe uma mensagem para nós! (opcional)" name="message" [(ngModel)]="message"/>
+				</div>
+
 				<button (click)="openQrCode()">Presentear</button>
 			</div>
 		</div>
