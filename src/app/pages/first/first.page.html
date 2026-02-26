@@ -43,7 +43,9 @@
 				</div>
 
 				<div class="message-input">
-					<input type="text" maxlength="118" placeholder="Deixe uma mensagem para nós! (opcional)" name="message" [(ngModel)]="message"/>
+                    <form [form]="messageForm">
+                        <input maxlength="118" placeholder="Deixe uma breve mensagem para nós! (opcional)" form-field-name="message"/>
+                    </form>
 				</div>
 
 				<button (click)="openQrCode()">Presentear</button>

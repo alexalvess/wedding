@@ -6,7 +6,7 @@ import db from '../../../db.json';
 @PreparePage({
     template: require('./first.page.html'),
     style: require('./first.page.scss'),
-    title: 'Presenteie Raquel & Fábio'
+    title: 'Presenteie Raquel & Fábio',
 })
 export class FirstPage extends Page {
 	public showValue: boolean = false;
@@ -24,7 +24,7 @@ export class FirstPage extends Page {
 		currency: 'BRL',
 	});
 
-    public message?: string;
+    public messageForm: Form;
 
 	public photos = [1,2,3,4,5,6,7,8,9,10,11,12,13];
 	public album: { number: number }[];
@@ -35,6 +35,10 @@ export class FirstPage extends Page {
 		this.album = [1,2,3,4].map(x => this.photos.map(y => ({
 			number: y,	
 		}))).flatMap(x => x);
+
+        this.messageForm = new Form({
+            message: { value: '' }
+        })
 	}
 
 	onInit(): void {
@@ -74,13 +78,15 @@ export class FirstPage extends Page {
 	}
 
 	public openQrCode() {
-        console.log(this.message)
+		const category = this.dropDownCategory.selected['title'];
+		const value = this.rangeValue.currentValue;
 
-		// const category = this.dropDownCategory.selected['title'];
-		// const value = this.rangeValue.currentValue;
-
-		// this.dialog.open(QrCodeDialog, {
-		// 	data: { category, value }
-		// });
+		this.dialog.open(QrCodeDialog, {
+			data: { 
+                category, 
+                value,
+                optionalMessage: this.messageForm.get('message').value
+            }
+		});
 	}
 }

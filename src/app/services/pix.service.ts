@@ -3,7 +3,7 @@ import { QrCodePix } from "qrcode-pix";
 
 @Injectable({ single: true })
 export class PixService {
-    public async generateQrCode(product: string, price: number): Promise<{image: string, payload: string}> {
+    public async generateQrCode(product: string, price: number, optionalMessage?: string): Promise<{image: string, payload: string}> {
         product = product.replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '');
 
         const qrCodePix = QrCodePix({
@@ -11,7 +11,7 @@ export class PixService {
             key: '+5531992885031',
             name: 'Raquel Cristina Ferreira da Silva',
             city: 'BELO HORIZONTE',
-            message: `Presente de casamento: ${product}`,
+            message: optionalMessage ? `🤵🏾‍♂️👰🏽‍♀️ ${optionalMessage}` : `Presente de casamento: ${product}`,
             value: price
         });
 

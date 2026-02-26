@@ -23,7 +23,7 @@ export class QrCodeDialog extends Dialog {
     }
 
     async onOpen() {
-        const pix = await this.pixService.generateQrCode(this.dialogRef.data.category, this.dialogRef.data.value);
+        const pix = await this.pixService.generateQrCode(this.dialogRef.data.category, this.dialogRef.data.value, this.dialogRef.data.optionalMessage);
         this.qrcode = pix.image;
         this.payload = pix.payload;
         this.render(() => this.showQrCode = true);

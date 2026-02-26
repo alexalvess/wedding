@@ -7,5 +7,5 @@ NimbleApp.config({
     directives: [],
     providers: [
         PixService
-    ]
+    ],
 }).start();
